@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>10-Image Slideshow</title>
+  <title>Compact 10-Image Slideshow</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
     * {
@@ -13,12 +13,18 @@
     body {
       font-family: "Lexend", sans-serif;
       background-color: #362a2b;
+      transform: scale(0.5); /* 50% size reduction */
+      transform-origin: top left;
+      width: 200%; /* Counteract scaling */
+      height: 200%;
+      position: absolute;
     }
     .slider {
       position: relative;
-      width: 100vw;
-      height: 100vh;
+      width: 50vw; /* Half of viewport width */
+      height: 50vh; /* Half of viewport height */
       overflow: hidden;
+      margin: 0 auto;
     }
     .slide {
       position: absolute;
@@ -36,11 +42,17 @@
 </head>
 <body>
   <div class="slider">
-    <!-- Update these paths to match your actual image files -->
+    <!-- Update these paths to your actual image files -->
     <div class="slide current" style="background: url('images/1.jpg') no-repeat center center/cover;"></div>
     <div class="slide" style="background: url('images/2.jpg') no-repeat center center/cover;"></div>
     <div class="slide" style="background: url('images/3.jpg') no-repeat center center/cover;"></div>
-    <!-- Add more slides as needed -->
+    <div class="slide" style="background: url('images/4.jpg') no-repeat center center/cover;"></div>
+    <div class="slide" style="background: url('images/5.jpg') no-repeat center center/cover;"></div>
+    <div class="slide" style="background: url('images/6.jpg') no-repeat center center/cover;"></div>
+    <div class="slide" style="background: url('images/7.jpg') no-repeat center center/cover;"></div>
+    <div class="slide" style="background: url('images/8.jpg') no-repeat center center/cover;"></div>
+    <div class="slide" style="background: url('images/9.jpg') no-repeat center center/cover;"></div>
+    <div class="slide" style="background: url('images/10.jpg') no-repeat center center/cover;"></div>
   </div>
 
   <script>
